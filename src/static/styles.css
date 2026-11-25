@@ -32,6 +32,30 @@
   --info-light: #d1ecf1;
 }
 
+body.dark-theme {
+  color-scheme: dark;
+  --background: #15171e;
+  --surface: #242733;
+  --text-primary: #f0f1f5;
+  --text-secondary: #c4c7d2;
+  --border: #515668;
+  --border-light: #393d4b;
+  --border-focus: #777e96;
+}
+
+body.dark-theme section h3,
+body.dark-theme .sidebar-filters h3,
+body.dark-theme .activity-card h4,
+body.dark-theme .participants-list h5,
+body.dark-theme #login-modal .modal-content h3 {
+  color: #b7c1ff;
+}
+
+body.dark-theme input:not([type="hidden"]) {
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -614,9 +638,12 @@ footer {
 
 /* User controls in header */
 #user-controls {
-  position: absolute;
-  top: 10px;
-  right: 15px;
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 15px 8px;
+  order: -1;
 }
 
 #user-status {
